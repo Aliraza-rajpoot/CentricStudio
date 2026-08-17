@@ -1,0 +1,189 @@
+/* =======================
+   ABOUT PAGE
+   ======================= */
+
+.about-hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: zoomSlow 10s ease-in-out infinite;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+@keyframes zoomSlow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* =======================
+   MISSION SECTION
+   ======================= */
+.mission-section {
+  background-color: var(--bg-light);
+  padding: 100px 0;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin-bottom: 40px;
+}
+
+.mission-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  max-width: 900px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.value-card {
+  background-color: var(--bg-white);
+  padding: 35px;
+  border-left: 3px solid var(--charcoal);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =======================
+   LOCATION SECTION
+   ======================= */
+.location-section {
+  background-color: var(--bg-white);
+  padding: 100px 0;
+}
+
+.location-section h2 {
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.location-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.location-item {
+  text-align: center;
+}
+
+.location-item h4 {
+  font-size: 1.1rem;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.location-item p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =======================
+   RESPONSIVE
+   ======================= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .mission-section h2,
+  .location-section h2 {
+    font-size: 2rem;
+  }
+
+  .mission-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .mission-section h2,
+  .location-section h2 {
+    font-size: 1.5rem;
+  }
+}
