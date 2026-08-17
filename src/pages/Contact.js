@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   const validatePhone = (phone) => {
-    return /^[\d\s\-\+\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+    return /^[\d\s\-+()]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
   };
 
   const handleChange = (e) => {
